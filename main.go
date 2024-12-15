@@ -15,7 +15,7 @@ func main() {
 	// Set up config
 	cfg, err := config.SetUpConfig()
 	if err != nil {
-		log.Fatalf("Not able to set config: %s ", err.Error)
+		log.Fatalf("Not able to set config: %s ", err.Error())
 		standardLogger.Misconfigured("Configuration is misconfigured", err)
 		return
 	}
@@ -23,7 +23,7 @@ func main() {
 	a, err := api.New(cfg)
 	if err != nil {
 		standardLogger.Error(err)
-		log.Fatal(err.Error)
+		log.Fatal(err.Error())
 		return
 	}
 
